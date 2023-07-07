@@ -1618,9 +1618,6 @@ footer .inner_c .footer_cont .cont_link a:last-child {
   }
 }
 @media screen and (max-width: 768px) {
-  html {
-    background-color: #0ff;
-  }
   .visual_wrap .video_modal_wrap {
     padding: 10px 10px 10px 13px;
   }
