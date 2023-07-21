@@ -11,52 +11,17 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script defer src="../js/common.js"></script>
 	<title>에스엠</title>
 </head>
-<body>
-	<header class="header_sub">
-		<div class="inner">
-			<h1 class="logo">
-					<a href="../index.html"><span>주식회사 에스엠</span></a>
-			</h1>
-			<nav class="gnb_wrap">
-				<ul class="gnb">
-					<li class="gnb_list">
-						<a href="./company.html">회사 정보</a>
-						<ul class="gnb_2">
-							<li><a href="#">회사소개</a></li>
-							<li><a href="#">연혁</a></li>
-							<li><a href="#">오시는 길</a></li>
-						</ul>
-					</li>
-					<li class="gnb_list"><a href="./business.html">사업영역</a></li>
-					<li class="gnb_list">
-						<a href="./original.html">주력 제품·기술</a>
-						<ul class="gnb_2">
-							<li><a href="#">가구용 필름 표면 종류</a></li>
-							<li><a href="#">가구용 필름<br>용도 및 베이스 필름</a></li>
-						</ul>
-					</li>
-					<li class="gnb_list"><a href="#">지속가능경영</a></li>
-					<li class="gnb_list"><a href="#">회사소식</a></li>
-					<li class="gnb_list"><a href="./contact.html">제품문의</a></li>
-				</ul>
-			</nav>
-			<div class="header_right">
-				<div class="lang">
-					<a href="#">KOR</a>
-					<a href="#">ENG</a>
-				</div>
-				<div class="menu_btn_wrap">
-					<a class="menu_btn">
-						<span class="line"></span>
-						<span class="line"></span>
-						<span class="line"></span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</header>
+<body class="sub_index">
+	<header class="header_sub"></header>
 	<main>
 		<section class="company_info_wrap">
 			<h2>company info area</h2>
@@ -65,22 +30,22 @@
 					<div class="item">
 						<h3 class="title">규모</h3>
 						<p class="desc">세계 최대 규모 양산 능력 보유</p>
-						<div class="img_area">
-							<img src="../imgs/company/img-company-subtop-01.jpg" alt="info_이미지">
+						<div class="img_area aniOn">
+							<img src="../imgs/company/img-company-subtop-01.jpg" class="image" alt="info_이미지">
 						</div>
 					</div>
 					<div class="item">
 						<h3 class="title">품질</h3>
 						<p class="desc">엄격한 품질관리를 통해 최상의 제품 생산</p>
-						<div class="img_area">
-							<img src="../imgs/company/img-company-subtop-02.jpg" alt="info_이미지">
+						<div class="img_area aniOn">
+							<img src="../imgs/company/img-company-subtop-02.jpg" class="image" alt="info_이미지">
 						</div>
 					</div>
 					<div class="item">
 						<h3 class="title">선도</h3>
 						<p class="desc">지속적인 연구개발로 시장을 선도</p>
-						<div class="img_area">
-							<img src="../imgs/company/img-company-subtop-03.jpg" alt="info_이미지">
+						<div class="img_area aniOn">
+							<img src="../imgs/company/img-company-subtop-03.jpg" class="image" alt="info_이미지">
 						</div>
 					</div>
 				</div>
@@ -88,7 +53,7 @@
 		</section>
 		<section class="company_sec_2_wrap">
 			<h2>company sec 2 area</h2>
-			<div class="map_area">
+			<div class="map_area" data-scroll="Onscroll">
 				<img src="../imgs/company/img-company-global-bg.svg" alt="맵 배경 이미지">
 			</div>
 			<div class="inner_c">
@@ -102,13 +67,13 @@
 		</section>
 		<section class="company_video_wrap">
 			<h2>company video area</h2>
-			<div class="video_wrap">
+			<div class="video_wrap" data-scroll="Onscroll">
 				<iframe class="video" src="https://player.vimeo.com/video/818260998?background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
 			</div>
 		</section>
 		<section class="company_sec_4_wrap">
 			<h2>company sec 4 area</h2>
-			<div class="inner_c">
+			<div class="inner_c" data-scroll="Onscroll">
 				<div class="img_area">
 					<img src="../imgs/company/img-company-infographic_n1.svg" alt="">
 					<img src="../imgs/company/img-company-infographic-m.svg" alt="">
@@ -155,61 +120,6 @@
 			</div>
 		</section>
 	</main>
-	<footer>
-		<div class="inner_c">
-			<div class="footer_top">
-				<div class="footer_title">
-					<p>우리의 고객이 만족하는 순간까지 빈틈없는 품질을 제공합니다.</p>
-					<a href="#" class="cont_btn">제품문의</a>
-				</div>
-				<ul class="footer_menu">
-					<li class="menu_item"><a href="#">회사 정보</a></li>
-					<li class="menu_item"><a href="#">사업영역</a></li>
-					<li class="menu_item"><a href="#">주력 제품·기술</a></li>
-					<li class="menu_item"><a href="#">지속가능경영</a></li>
-					<li class="menu_item"><a href="#">회사소식</a></li>
-					<li class="menu_item"><a href="#">제품문의</a></li>
-				</ul>
-			</div>
-			<div class="footer_btn"><a href="#">Promax 사이트 바로가기</a></div>
-			<div class="footer_cont">
-				<div class="cont_item">
-					<address>
-						<dl class="address_cont">
-							<div class="item">
-								<dt>회사명</dt>
-								<dd>주식회사 에스엠</dd>
-							</div>
-							<div class="item">
-								<dt>대표명</dt>
-								<dd>송종채</dd>
-							</div>
-							<div class="item">
-								<dt>주소</dt>
-								<dd>경기도 포천시 군내면 포천로 1325</dd>
-							</div>
-							<div class="item">
-								<dt>대표번호</dt>
-								<dd>031-536-1604</dd>
-							</div>
-							<div class="item">
-								<dt>대표이메일</dt>
-								<dd>info@smdecor.kr</dd>
-							</div>
-							<div class="item">
-								<dt>팩스</dt>
-								<dd>031-536-1606</dd>
-							</div>
-						</dl>
-					</address>
-					<p class="copyright">ⓒ ㈜에스엠. All Rights Reserved.</p>
-				</div>
-				<div class="cont_link">
-					<a href="#">개인정보 처리방침</a>
-					<a href="#">쿠키정책</a>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<footer></footer>
 </body>
 </html>

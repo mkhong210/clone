@@ -11,54 +11,18 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script defer src="../js/common.js"></script>
+	<script defer src="../js/business.js"></script>
 	<title>에스엠</title>	
 </head>
-<body>
-	<header class="header_sub">
-		<div class="inner">
-			<h1 class="logo">
-					<a href="../index.html"><span>주식회사 에스엠</span></a>
-			</h1>
-			<nav class="gnb_wrap">
-				<ul class="gnb">
-					<li class="gnb_list">
-						<a href="./company.html">회사 정보</a>
-						<ul class="gnb_2">
-							<li><a href="#">회사소개</a></li>
-							<li><a href="#">연혁</a></li>
-							<li><a href="#">오시는 길</a></li>
-						</ul>
-					</li>
-					<li class="gnb_list"><a href="./business.html">사업영역</a></li>
-					<li class="gnb_list">
-						<a href="./original.html">주력 제품·기술</a>
-						<ul class="gnb_2">
-							<li><a href="#">가구용 필름 표면 종류</a></li>
-							<li><a href="#">가구용 필름<br>용도 및 베이스 필름</a></li>
-						</ul>
-					</li>
-					<li class="gnb_list"><a href="#">지속가능경영</a></li>
-					<li class="gnb_list"><a href="#">회사소식</a></li>
-					<li class="gnb_list"><a href="./contact.html">제품문의</a></li>
-				</ul>
-			</nav>
-			<div class="header_right">
-				<div class="lang">
-					<a href="#">KOR</a>
-					<a href="#">ENG</a>
-				</div>
-				<div class="menu_btn_wrap">
-					<a class="menu_btn">
-						<span class="line"></span>
-						<span class="line"></span>
-						<span class="line"></span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</header>
+<body class="sub_index">
+	<header class="header_sub"></header>
 	<main>
 		<section class="sub_visual_wrap">
 			<h2>business visual area</h2>
@@ -69,12 +33,14 @@
 				</div>
 			</div>
 			<div class="scroll_down_wrap">
-				<div class="inner_c">
+				<div class="scroll_inner">
 					<div class="scroll_icon"></div>
 					<p>Scroll down</p>
 				</div>
 			</div>
-			<div class="bg_img"></div>
+			<div class="bg_img aniOn">
+				<div class="image"></div>
+			</div>
 		</section>
 		<section class="business_sec_2_wrap">
 			<h2>business sec 2 area</h2>
@@ -105,7 +71,7 @@
 						<div class="txt_area">
 							<h3 class="title">잉크젯 캔버스 원단 사업</h3>
 							<p class="sub_title">잉크젯 프린팅으로 뮤지엄 퀄리티의 고품질 그림이나 사진 인쇄물을 얻을 수 있는 잉크젯 캔버스 원단을 개발 생산합니다.</p>
-							<div class="item_btn"><a href="#">Promax 사이트 바로가기</a></div>
+							<div class="item_btn"><a href="javascript:;">Promax 사이트 바로가기</a></div>
 							<div class="desc_area">
 								<p class="desc">고품위 직조 원단의 최고급 ARTIST CANVAS</p>
 								<p class="desc">높은 해상도를 제공하는 나노 코팅 기술</p>
@@ -122,7 +88,7 @@
 						<div class="txt_area">
 							<h3 class="title">메탈릭 헤어라인 필름 사업</h3>
 							<p class="sub_title">정교한 헤어라인 패턴으로 풍부한 질감과 광도를 제공하는 메탈릭 헤어라인 필름을 개발 생산합니다. 가전용 철판 표면, 가구용 가공재 표면, 엘리베이터 표면 등에 널리 사용됩니다.</p>
-							<div class="item_btn"><a href="#">Promax 사이트 바로가기</a></div>
+							<div class="item_btn"><a href="javascript:;">Promax 사이트 바로가기</a></div>
 							<div class="desc_area">
 								<p class="desc">커스터마이징이 가능한 정교한 헤어라인과 클리닝 시스템</p>
 								<p class="desc">헤어라인에 최적화된 프라이머와 증착 대체효과를 구현한 메탈잉크 적용</p>
@@ -140,78 +106,23 @@
 					<p class="title">독보적인 기술과 숙련된 노하우로 <br class="none">세계 최대 규모 양산 능력 보유합니다.</p>
 					<p class="desc">에스엠의 독보적인 기술력은 품질 경쟁력과 세계 최대 규모라는 성과를 달성했습니다. 지난 20여 년 동안 대한민국의 표면 필름 산업의 길을 개척한다는 열정으로 글로벌 산업 확장을 이루고 있습니다.</p>
 				</div>
-				<div class="slide_area swiper mySwiper">
+				<div class="slide_area swiper businessSwiper">
 					<div class="slide_controll">
 						<div class="swiper-button-next"></div>
 						<div class="swiper-button-prev"></div>
 					</div>
 					<div class="slide swiper-wrapper">
-						<div class="slide_img">
+						<!-- <div class="slide_img"> -->
 							<div class="img_area swiper-slide"><img src="../imgs/business/img-business-04.jpg" alt=""></div>
 							<div class="img_area swiper-slide"><img src="../imgs/business/img-business-05.jpg" alt=""></div>
 							<div class="img_area swiper-slide"><img src="../imgs/business/img-business-06.jpg" alt=""></div>
 							<div class="img_area swiper-slide"><img src="../imgs/business/img-business-07.jpg" alt=""></div>
-						</div>
+						<!-- </div> -->
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
-	<footer>
-		<div class="inner_c">
-			<div class="footer_top">
-				<div class="footer_title">
-					<p>우리의 고객이 만족하는 순간까지 빈틈없는 품질을 제공합니다.</p>
-					<a href="#" class="cont_btn">제품문의</a>
-				</div>
-				<ul class="footer_menu">
-					<li class="menu_item"><a href="#">회사 정보</a></li>
-					<li class="menu_item"><a href="#">사업영역</a></li>
-					<li class="menu_item"><a href="#">주력 제품·기술</a></li>
-					<li class="menu_item"><a href="#">지속가능경영</a></li>
-					<li class="menu_item"><a href="#">회사소식</a></li>
-					<li class="menu_item"><a href="#">제품문의</a></li>
-				</ul>
-			</div>
-			<div class="footer_btn"><a href="#">Promax 사이트 바로가기</a></div>
-			<div class="footer_cont">
-				<div class="cont_item">
-					<address>
-						<dl class="address_cont">
-							<div class="item">
-								<dt>회사명</dt>
-								<dd>주식회사 에스엠</dd>
-							</div>
-							<div class="item">
-								<dt>대표명</dt>
-								<dd>송종채</dd>
-							</div>
-							<div class="item">
-								<dt>주소</dt>
-								<dd>경기도 포천시 군내면 포천로 1325</dd>
-							</div>
-							<div class="item">
-								<dt>대표번호</dt>
-								<dd>031-536-1604</dd>
-							</div>
-							<div class="item">
-								<dt>대표이메일</dt>
-								<dd>info@smdecor.kr</dd>
-							</div>
-							<div class="item">
-								<dt>팩스</dt>
-								<dd>031-536-1606</dd>
-							</div>
-						</dl>
-					</address>
-					<p class="copyright">ⓒ ㈜에스엠. All Rights Reserved.</p>
-				</div>
-				<div class="cont_link">
-					<a href="#">개인정보 처리방침</a>
-					<a href="#">쿠키정책</a>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<footer></footer>
 </body>
 </html>

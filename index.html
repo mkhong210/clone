@@ -11,83 +11,64 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script defer src="./js/common.js"></script>
+	<script defer src="./js/main.js"></script>
 	<title>에스엠</title>
 </head>
-<body>
-	<header class="header">
-	<!-- <div class="header-wrap"> -->
-		<div class="inner">
-			<h1 class="logo">
-					<a href="#"><span>주식회사 에스엠</span></a>
-			</h1>
-			<nav class="gnb_wrap">
-				<ul class="gnb">
-					<li class="gnb_list">
-						<a href="./sub/company.html">회사 정보</a>
-						<ul class="gnb_2">
-							<li><a href="#">회사소개</a></li>
-							<li><a href="#">연혁</a></li>
-							<li><a href="#">오시는 길</a></li>
-						</ul>
-					</li>
-					<li class="gnb_list"><a href="./sub/business.html">사업영역</a></li>
-					<li class="gnb_list">
-						<a href="./sub/original.html">주력 제품·기술</a>
-						<ul class="gnb_2">
-							<li><a href="#">가구용 필름 표면 종류</a></li>
-							<li><a href="#">가구용 필름<br>용도 및 베이스 필름</a></li>
-						</ul>
-					</li>
-					<li class="gnb_list"><a href="#">지속가능경영</a></li>
-					<li class="gnb_list"><a href="#">회사소식</a></li>
-					<li class="gnb_list"><a href="./sub/contact.html">제품문의</a></li>
-				</ul>
-			</nav>
-			<div class="header_right">
-				<div class="lang">
-					<a href="#">KOR</a>
-					<a href="#">ENG</a>
-				</div>
-				<div class="menu_btn_wrap">
-					<a class="menu_btn">
-						<span class="line"></span>
-						<span class="line"></span>
-						<span class="line"></span>
-					</a>
-				</div>
-			</div>
-		</div>
-	<!-- </div> -->
-	</header>
+<body class="main_index">
+	<header class="header"></header>
 	<main>
 		<section class="visual_wrap">
 			<h2>main visual area</h2>
-			<div class="cont_wrap">
-				<div class="inner_c">
-					<div class="swiper_controll">
-						<span>01</span>
-						<span>02</span>
+			<div class="cont_wrap swiper mySwiper">
+				<div class="slide_controll">
+					<div class="swiper-pagination">
+						
 					</div>
-					<div class="cont_text">
-						<div class="text_title">
-							<p>세계 최고라는 찬사에 만족하기보다, <br><span>에스엠만의 기술과 특별함</span>으로 <br>표면 코팅 업계를 이끌어갑니다.</p>
+					<div class="pause_controll">
+						<span class="pause"></span>
+						<span class="play"></span>
+					</div>
+					<!-- <div class="autoplay-progress">
+						<svg viewBox="0 0 48 48">
+							<circle cx="24" cy="24" r="20"></circle>&:nth-of-type(2) img
+						</svg>
+					</div> -->
+				</div>
+				<div class="swiper_wrap swiper-wrapper">
+					<div class="slide swiper-slide">
+						<div class="cont_text">
+							<div class="text_title">
+								<p>세계 최고라는 찬사에 만족하기보다, <br><span>에스엠만의 기술과 특별함</span>으로 <br>표면 코팅 업계를 이끌어갑니다.</p>
+							</div>
 						</div>
-						<div class="text_title" style="display:none">
-							<p>세계 최고라는 찬사에 만족하기보다, <br><span>에스엠만의 기술과 특별함</span>으로 <br>표면 코팅 업계를 이끌어갑니다.</p>
+						<img src="./imgs/main/img-main-visual-01_n1.jpg" alt="">
+						<img src="./imgs/main/img-main-visual-01-m_n1.jpg" alt="">
+					</div>
+					<div class="slide swiper-slide">
+						<div class="cont_text">
+							<div class="text_title">
+								<p><span>우리만의 길을 만듭니다.</span><br>품질을 위해 타협하지 않으며<br>생산 과정을 엄격하게 관리합니다.</p>
+							</div>
 						</div>
+						<img src="./imgs/main/img-main-visual-02_n1.jpg" alt="">
+						<img src="./imgs/main/img-main-visual-02-m_n1.jpg" alt="">
 					</div>
 				</div>
 			</div>
-			<div class="swiper_wrap">
-				<div class="slide_1"></div>
-			</div>
 			<div class="scroll_down_wrap">
-				<div class="inner_c">
+				<div class="scroll_inner">
 					<div class="scroll_icon"></div>
 					<p>Scroll down</p>
 				</div>
 			</div>
-			<div class="video_modal_wrap">
+			<a class="video_modal_wrap" onclick="modalClick(this)">
 				<div class="modal_btn">
 					<div class="modal_title">
 						<p>에스엠</p>
@@ -100,8 +81,20 @@
 						</div>
 					</div>
 				</div>
+			</a>
+			<div class="modal_wrap" id="video_modal">
+				<div class="modal_cont">
+					<a class="close_btn" onclick="closeClick(this)"></a>
+					<div class="video_cont">
+						<!-- <iframe class="modal-video video" src="https://www.youtube.com/embed/49BGdjsU03U?autoplay=1&amp;rel=0" frameborder="0" allow="autoplay; encrypted-media" ></iframe> -->
+						<iframe class="modal-video video" src="https://www.youtube.com/embed/49BGdjsU03U?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+				</div>
+				<!-- <div class="video_inner">
+				</div> -->
 			</div>
 		</section> 
+		
 		<section class="main_intro_wrap">
 			<h2>main intro area</h2>
 			<div class="inner_c">
@@ -118,7 +111,7 @@
 					<div class="intro_text">
 						<p>We make</p>
 					</div>
-					<div class="intro_img">
+					<div class="intro_img aniOn">
 						<img src="./imgs/main/img-main-about-01_n1.jpg" alt="">
 					</div>
 				</div>
@@ -126,7 +119,7 @@
 						<div class="intro_text">
 							<p>standards</p>
 						</div>
-						<div class="intro_img">
+						<div class="intro_img aniOn">
 							<img src="./imgs/main/img-main-about-02_n1.jpg" alt="">
 						</div>
 				</div>
@@ -134,7 +127,7 @@
 					<div class="intro_text">
 						<p>에스엠은 스스로 엄격한 기준을 만들어<br>고객에게 <b>최고의 품질</b>을 선사합니다.</p>
 					</div>
-					<div class="intro_img">
+					<div class="intro_img aniOn">
 						<img src="./imgs/main/img-main-about-03_n1.jpg" alt="">
 					</div>
 				</div>
@@ -142,13 +135,13 @@
 		</section>
 		<section class="main_business_wrap">
 			<h2>main business area</h2>
-			<div class="inner_c">
+			<div class="inner_c" data-scroll="Onscroll">
 				<h3 class="title">사업 영역</h3>
 				<div class="business_cont">
 					<div class="cont_left">
 						<div class="business_item">
-							<a href="#">
-								<div class="bg" style="background-image: url(./imgs/main/img-main-business-01.jpg);">
+							<a href="javascript:;">
+								<div class="bg" style="background-image: url(../imgs/main/img-main-business-01.jpg);">
 								</div>
 								<div class="txt_wrap">
 									<div class="inner_t">
@@ -161,8 +154,8 @@
 					</div>
 					<div class="cont_right">
 						<div class="business_item">
-							<a href="#">
-								<div class="bg" style="background-image: url(./imgs/main/img-main-business-02.jpg);">
+							<a href="javascript:;">
+								<div class="bg" style="background-image: url(../imgs/main/img-main-business-02.jpg);">
 								</div>
 									<div class="txt_wrap">
 										<div class="inner_t">
@@ -173,8 +166,8 @@
 							</a>
 						</div>
 						<div class="business_item">
-							<a href="#">
-								<div class="bg" style="background-image: url(./imgs/main/img-main-business-03.jpg);">
+							<a href="javascript:;">
+								<div class="bg" style="background-image: url(../imgs/main/img-main-business-03.jpg);">
 								</div>
 									<div class="txt_wrap">
 										<div class="inner_t">
@@ -190,59 +183,108 @@
 		</section>
 		<section class="main_type_wrap">
 			<h2>main tyep area</h2>
-			<div class="inner_c">
+			<div class="inner_c" data-scroll="Onscroll">
 				<div class="txt_area">
 					<h3 class="title">가구용 필름 표면 종류</h3>
 					<div class="tab_menu">
 						<ul class="tab">
 							<li class="item on">
-								<a href="#">Original Coating</a>
+								<a href="javascript:;">Original Coating</a>
 								<span class="num">3</span>
 							</li>
 							<li class="item">
-								<a href="#">Premium Matt Coating</a>
+								<a href="javascript:;">Premium Matt Coating</a>
 								<span class="num">4</span>
 							</li>
 							<li class="item">
-								<a href="#">Metal Printing</a>
+								<a href="javascript:;">Metal Printing</a>
 								<span class="num">3</span>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="tab_list tab_1">
-					<ul>
-						<li class="list"><a href="#">
+				<div class="tab_list tab_1 swiper typeSwiper on" id="tab_1">
+					<div class="list_wrap swiper-wrapper">
+						<div class="list swiper-slide"><a href="javascript:;">
 							<img src="./imgs/main/original-img-01.png" alt="">
+							<img src="./imgs/main/original-img-01-m_n1.png" alt="">
 							<span class="sub_title">Original Coating</span>
 							<p class="sub_txt">High glossy</p>
-						</a></li>
-					</ul>
-					<ul>
-						<li class="list"><a href="#">
+						</a></div>
+						<div class="list swiper-slide"><a href="javascript:;">
 							<img src="./imgs/main/original-img-02.png" alt="">
+							<img src="./imgs/main/original-img-02-m_n1.png" alt="">
 							<span class="sub_title">Original Coating</span>
 							<p class="sub_txt">Semi glossy</p>
-						</a></li>
-					</ul>
-					<ul>
-						<li class="list"><a href="#">
+						</a></div>
+						<div class="list swiper-slide"><a href="javascript:;">
 							<img src="./imgs/main/original-img-03.png" alt="">
+							<img src="./imgs/main/original-img-03-m_n1.png" alt="">
 							<span class="sub_title">Original Coating</span>
 							<p class="sub_txt">Super matt</p>
-						</a></li>
-					</ul>
+						</a></div>
+					</div>
+				</div>
+				<div class="tab_list tab_2 swiper typeSwiper" id="tab_2">
+					<div class="list_wrap swiper-wrapper">
+						<div class="list swiper-slide"><a href="javascript:;">
+							<img src="./imgs/main/premium-img-01.png" alt="">
+							<img src="./imgs/main/premium-img-01-m_n1.png" alt="">
+							<span class="sub_title">Premium Matt Coating</span>
+							<p class="sub_txt">Pure X</p>
+						</a></div>
+						<div class="list swiper-slide"><a href="javascript:;">
+							<img src="./imgs/main/premium-img-02.png" alt="">
+							<img src="./imgs/main/premium-img-02-m_n1.png" alt="">
+							<span class="sub_title">Premium Matt Coating</span>
+							<p class="sub_txt">Pure Y</p>
+						</a></div>
+						<div class="list swiper-slide"><a href="javascript:;">
+							<img src="./imgs/main/premium-img-03.png" alt="">
+							<img src="./imgs/main/premium-img-03-m_n1.png" alt="">
+							<span class="sub_title">Premium Matt Coating</span>
+							<p class="sub_txt">Pure H</p>
+						</a></div>
+						<div class="list swiper-slide"><a href="javascript:;">
+							<img src="./imgs/main/premium-img-03.png" alt="">
+							<img src="./imgs/main/premium-img-03-m_n1.png" alt="">
+							<span class="sub_title">Premium Matt Coating</span>
+							<p class="sub_txt">Pure α</p>
+						</a></div>
+					</div>
+				</div>
+				<div class="tab_list tab_3 swiper typeSwiper" id="tab_3">
+					<div class="list_wrap swiper-wrapper">
+						<div class="list swiper-slide"><a href="javascript:;">
+							<img src="./imgs/main/metal-img-01-slide1.png" alt="">
+							<img src="./imgs/main/metal-img-01-slide1-m_n1.png" alt="">
+							<span class="sub_title">Premium Matt Coating</span>
+							<p class="sub_txt">High glossy</p>
+						</a></div>
+						<div class="list swiper-slide"><a href="javascript:;">
+							<img src="./imgs/main/metal-img-02.png" alt="">
+							<img src="./imgs/main/metal-img-02-m_n1.png" alt="">
+							<span class="sub_title">Premium Matt Coating</span>
+							<p class="sub_txt">Semi glossy</p>
+						</a></div>
+						<div class="list swiper-slide"><a href="javascript:;">
+							<img src="./imgs/main/metal-img-03-slide1_n1.png" alt="">
+							<img src="./imgs/main/metal-img-03-slide1-m_n2.png" alt="">
+							<span class="sub_title">Premium Matt Coating</span>
+							<p class="sub_txt">Super matt</p>
+						</a></div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section class="main_film_wrap">
 			<h2>main film area</h2>
-			<div class="inner_c">
+			<div class="inner_c" data-scroll="Onscroll">
 				<div class="txt_area">
 					<h3 class="title">가구용 필름<br>용도 및 베이스 필름</h3>
 					<div class="desc">
 						<span>필름의 목적과 디자인을 고려하여 적절한 원단을 선택하는 것이 중요하며, 에스엠은 수년간의 노하우로 각 용도에 맞는 최적의 원단을 사용합니다.</span>
-						<a href="#" class="cont_btn">자세히 보기</a>
+						<a href="javascript:;" class="cont_btn">자세히 보기</a>
 					</div>
 				</div>
 				<div class="cont_wrap">
@@ -315,7 +357,7 @@
 					<h4 class="title">에스엠은 지속가능경영으로 모두가 함께하는 내일을 만듭니다.</h4>
 					<div class="desc">
 						<span>도전을 멈추지 않는 뜨거운 열정과 원칙에 대한 강한 신념으로 지속 가능한 미래를 열어가겠습니다.</span>
-						<a href="#" class="cont_btn">자세히 보기</a>
+						<a href="javascript:;" class="cont_btn">자세히 보기</a>
 					</div>
 				</div>
 			</div>
@@ -334,61 +376,6 @@
 			</div>
 		</section>
 	</main>
-	<footer>
-		<div class="inner_c">
-			<div class="footer_top">
-				<div class="footer_title">
-					<p>우리의 고객이 만족하는 순간까지<br>빈틈없는 품질을 제공합니다.</p>
-					<a href="#" class="cont_btn">제품문의</a>
-				</div>
-				<ul class="footer_menu">
-					<li class="menu_item"><a href="#">회사 정보</a></li>
-					<li class="menu_item"><a href="#">사업영역</a></li>
-					<li class="menu_item"><a href="#">주력 제품·기술</a></li>
-					<li class="menu_item"><a href="#">지속가능경영</a></li>
-					<li class="menu_item"><a href="#">회사소식</a></li>
-					<li class="menu_item"><a href="#">제품문의</a></li>
-				</ul>
-			</div>
-			<div class="footer_btn"><a href="#">Promax 사이트 바로가기</a></div>
-			<div class="footer_cont">
-				<div class="cont_item">
-					<address>
-						<dl class="address_cont">
-							<div class="item">
-								<dt>회사명</dt>
-								<dd>주식회사 에스엠</dd>
-							</div>
-							<div class="item">
-								<dt>대표명</dt>
-								<dd>송종채</dd>
-							</div>
-							<div class="item">
-								<dt>주소</dt>
-								<dd>경기도 포천시 군내면 포천로 1325</dd>
-							</div>
-							<div class="item">
-								<dt>대표번호</dt>
-								<dd>031-536-1604</dd>
-							</div>
-							<div class="item">
-								<dt>대표이메일</dt>
-								<dd>info@smdecor.kr</dd>
-							</div>
-							<div class="item">
-								<dt>팩스</dt>
-								<dd>031-536-1606</dd>
-							</div>
-						</dl>
-					</address>
-					<p class="copyright">ⓒ ㈜에스엠. All Rights Reserved.</p>
-				</div>
-				<div class="cont_link">
-					<a href="#">개인정보 처리방침</a>
-					<a href="#">쿠키정책</a>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<footer></footer>
 </body>
 </html>
