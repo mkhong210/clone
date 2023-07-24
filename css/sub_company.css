@@ -259,6 +259,7 @@ h4.title {
   bottom: 60px;
   left: 0;
   z-index: 5;
+  cursor: pointer;
 }
 .scroll_down_wrap .scroll_inner {
   display: flex;
@@ -1034,8 +1035,8 @@ footer .inner_c .footer_cont .cont_link a:last-child {
     height: 38px;
   }
   header .header_open_wrap {
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.4s, visibility 0.4s;
     display: block;
     padding: 105px 50px 0;

@@ -127,6 +127,7 @@ input:focus, textarea:focus {
   width: 28px;
   height: 28px;
   margin-left: 6px;
+  z-index: 2;
 }
 .slide_controll .pause_controll .pause {
   display: flex;
@@ -136,7 +137,6 @@ input:focus, textarea:focus {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  z-index: 3;
 }
 .slide_controll .pause_controll .pause::before, .slide_controll .pause_controll .pause::after {
   content: "";
@@ -150,6 +150,9 @@ input:focus, textarea:focus {
 }
 .slide_controll .pause_controll .play {
   display: none;
+  width: 10px;
+  height: 10px;
+  background: url(../imgs/common/icon-slider-play.svg) no-repeat center/contain;
 }
 
 .visual_wrap {
@@ -388,6 +391,17 @@ input:focus, textarea:focus {
 
 .main_business_wrap {
   width: 100%;
+  position: relative;
+}
+.main_business_wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 277px;
+  background-color: #f4f4f9;
+  z-index: -1;
 }
 .main_business_wrap .business_cont {
   width: 100%;
@@ -396,6 +410,9 @@ input:focus, textarea:focus {
 .main_business_wrap .business_cont .cont_left {
   width: 60%;
   height: 620px;
+}
+.main_business_wrap .business_cont .cont_left:nth-of-type(1) .business_item .bg {
+  background-image: url(../imgs/main/img-main-business-01.jpg);
 }
 .main_business_wrap .business_cont .cont_right {
   width: 40%;
@@ -408,6 +425,12 @@ input:focus, textarea:focus {
   position: relative;
   overflow: hidden;
   bottom: 0;
+}
+.main_business_wrap .business_cont .business_item:nth-of-type(1) .bg {
+  background-image: url(../imgs/main/img-main-business-02.jpg);
+}
+.main_business_wrap .business_cont .business_item:nth-of-type(2) .bg {
+  background-image: url(../imgs/main/img-main-business-03.jpg);
 }
 .main_business_wrap .business_cont .business_item a {
   width: 100%;
@@ -877,6 +900,7 @@ h4.title {
   bottom: 60px;
   left: 0;
   z-index: 5;
+  cursor: pointer;
 }
 .scroll_down_wrap .scroll_inner {
   display: flex;
@@ -1652,8 +1676,8 @@ footer .inner_c .footer_cont .cont_link a:last-child {
     height: 38px;
   }
   header .header_open_wrap {
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.4s, visibility 0.4s;
     display: block;
     padding: 105px 50px 0;
@@ -1931,6 +1955,9 @@ footer .inner_c .footer_cont .cont_link a:last-child {
     padding-bottom: 40px;
     margin-bottom: 0;
     border-bottom: #e72223 solid 1px;
+  }
+  .main_business_wrap::after {
+    display: none;
   }
   .main_business_wrap .business_cont {
     width: 100%;

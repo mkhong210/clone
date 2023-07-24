@@ -3,11 +3,11 @@ var swiper = new Swiper(".businessSwiper", {
 	grabCursor: true,
 	loop: true,
 	loopFillGroupWithBlank: true,
-	loopAdditionalSlides: 4, // loop로 만들어지는 슬라이드 비어보이는 현상 방지
+	loopAdditionalSlides: 2, // loop로 만들어지는 슬라이드 비어보이는 현상 방지
 	speed: 500,
 	autoplay: {
 		delay: 5000,
-		disableOnInteraction: false // 드래그 후 자동 재생
+		disableOnInteraction: false // 드래그 후 자동 재생 - false(활성화)
 	},
 	breakpoints: {
 		0: {
@@ -21,7 +21,6 @@ var swiper = new Swiper(".businessSwiper", {
 			centeredSlides: false,
 			slidesPerView: 2,
 			slidesPerGroup: 2,
-			// loopAdditionalSlides: 1, // loop로 만들어지는 슬라이드 비어보이는 현상 방지
 		},
 	},
 	navigation: {
